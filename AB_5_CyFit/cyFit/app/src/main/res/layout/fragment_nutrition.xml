@@ -1,0 +1,153 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    tools:context="cyfitpackage.cyfit.fragment.NutritionFragment">
+
+    <LinearLayout
+        android:id="@+id/foodData"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+
+        <RelativeLayout
+            android:id="@+id/nutritionFood"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <Button
+                android:id="@+id/btnFoodDateSelect"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="2dip"
+                android:background="@drawable/button_border"
+                android:padding="5dp"
+                android:text=""
+                android:textAllCaps="false"
+                android:textColor="#008000"
+                android:textSize="30sp" />
+
+            <Button
+                android:id="@+id/btnAddFood"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="25dp"
+                android:layout_marginTop="2dip"
+                android:layout_toEndOf="@+id/btnFoodDateSelect"
+                android:background="@null"
+                android:text="@string/log_food"
+                android:textAllCaps="false"
+                android:textColor="#008000"
+                android:textSize="20sp"
+                tools:ignore="RelativeOverlap" />
+
+            <TextView
+                android:id="@+id/caloriesTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:text="@string/calories_title"
+                android:textAlignment="center"
+                android:textColor="#008000"
+                android:textSize="30sp"
+                android:layout_below="@+id/btnFoodDateSelect"
+                android:layout_alignParentStart="true" />
+
+            <TextView
+                android:id="@+id/caloriesTotal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/caloriesTitle"
+                android:layout_marginStart="5dp"
+                android:padding="5dp"
+                android:text="@string/calories_total"
+                android:textAlignment="center"
+                android:textColor="#008000"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/caloriesRemaining"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/caloriesTotal"
+                android:layout_marginStart="5dp"
+                android:padding="5dp"
+                android:text="@string/calories_remaining"
+                android:textAlignment="center"
+                android:textColor="#008000"
+                android:textSize="18sp" />
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/foodRV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/caloriesRemaining"
+                android:layout_alignStart="@+id/caloriesRemaining"
+                android:layout_alignParentEnd="true" />
+
+            <WebView
+                android:id="@+id/macroChart"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_alignParentEnd="true"
+                android:layout_alignTop="@+id/btnAddFood"
+                android:layout_marginTop="34dp" />
+
+            <View
+                android:id="@+id/divider"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_alignParentBottom="true"
+                android:background="@android:color/darker_gray" />
+
+            <TextView
+                android:id="@+id/WeightTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/weight_title"
+                android:textAlignment="center"
+                android:textColor="#008000"
+                android:textSize="23sp"
+                android:layout_below="@+id/foodRV"
+                android:layout_alignParentStart="true" />
+
+            <TextView
+                android:id="@+id/CurrentWeight"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignStart="@+id/caloriesRemaining"
+                android:layout_below="@+id/WeightTitle"
+                android:padding="5dp"
+                android:textAlignment="center"
+                android:textColor="#008000"
+                android:textSize="30sp"
+                android:layout_toStartOf="@+id/WeightChart"
+                android:layout_above="@+id/btnWeighIn" />
+
+            <Button
+                android:id="@+id/btnWeighIn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:text="@string/weigh_in"
+                android:textAllCaps="false"
+                android:textColor="#008000"
+                android:textSize="20sp"
+                android:layout_marginBottom="50dp"
+                android:layout_above="@+id/divider"
+                android:layout_alignParentStart="true" />
+
+            <WebView
+                android:id="@+id/WeightChart"
+                android:layout_width="150dp"
+                android:layout_height="175dp"
+                android:layout_alignParentEnd="true"
+                android:layout_toEndOf="@+id/WeightTitle"
+                android:layout_below="@+id/foodRV"
+                android:layout_alignBottom="@+id/btnWeighIn" />
+        </RelativeLayout>
+    </LinearLayout>
+</FrameLayout>

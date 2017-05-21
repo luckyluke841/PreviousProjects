@@ -1,0 +1,305 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/cyFitpackage.cyfit"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:weightSum="1">
+
+    <ImageView
+        android:src="@mipmap/profilepic"
+        android:id="@+id/ProfilePic"
+        android:layout_gravity="center"
+        android:layout_width="@android:dimen/thumbnail_width"
+        android:layout_height="100dp"
+        android:layout_weight="0.04" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="0.04">
+
+
+        <TextView
+            android:id="@+id/FirstNameTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="First Name: "
+            android:textSize="30sp"
+            android:layout_alignLeft="@id/FirstNameTitle"
+            android:layout_marginBottom="15dp"/>
+        <TextView
+            android:id="@+id/FirstName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textSize="30sp"
+            android:layout_toRightOf="@id/FirstNameTitle"/>
+
+        <EditText
+            android:id="@+id/FirstNameEdit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/FirstNameTitle"
+            android:hint="Enter Your First Name"
+            android:text=""
+            android:textColor="@android:color/holo_blue_dark"
+            android:visibility="invisible"/>
+
+
+
+        <TextView
+            android:id="@+id/LastNameTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Last Name: "
+            android:textSize="30sp"
+            android:layout_below="@id/FirstNameTitle"
+            android:layout_marginBottom="15dp"/>
+        <TextView
+            android:id="@+id/LastName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textSize="30sp"
+            android:layout_toRightOf="@id/LastNameTitle"
+            android:layout_below="@id/FirstNameTitle"/>
+        <EditText
+            android:id="@+id/LastNameEdit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/LastNameTitle"
+            android:layout_below="@id/FirstNameTitle"
+            android:hint="Enter Your Last Name"
+            android:text=""
+            android:textColor="@android:color/holo_blue_dark"
+            android:visibility="invisible" />
+
+
+        <TextView
+            android:id="@+id/EmailTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Email: "
+            android:textSize="30sp"
+            android:layout_below="@id/LastNameTitle"
+            android:layout_marginBottom="15dp"/>
+        <TextView
+            android:id="@+id/Email"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textSize="30sp"
+            android:layout_toRightOf="@id/EmailTitle"
+            android:layout_below="@id/LastNameTitle"/>
+        <EditText
+            android:id="@+id/EmailEdit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/EmailTitle"
+            android:layout_below="@id/LastNameTitle"
+            android:hint="Enter Your Email"
+            android:text=""
+            android:textColor="@android:color/holo_blue_dark"
+            android:visibility="invisible" />
+
+
+        <TextView
+            android:id="@+id/HeightTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Height: "
+            android:textSize="30sp"
+            android:layout_below="@id/EmailTitle"
+            android:layout_marginBottom="15dp"/>
+        <TextView
+            android:id="@+id/Height"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textSize="30sp"
+            android:layout_toRightOf="@id/HeightTitle"
+            android:layout_below="@id/EmailTitle"/>
+        <EditText
+            android:id="@+id/HeightFeetEdit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/HeightTitle"
+            android:layout_below="@id/EmailTitle"
+            android:hint="Feet"
+            android:text=""
+            android:textColor="@android:color/holo_blue_dark"
+            android:visibility="invisible" />
+
+        <TextView
+            android:id="@+id/HeightFeetUnit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="'"
+            android:textSize="30sp"
+            android:layout_toRightOf="@id/HeightFeetEdit"
+            android:layout_below="@id/EmailTitle"
+            android:visibility="invisible"/>
+
+        <EditText
+            android:id="@+id/HeightInchesEdit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/HeightFeetUnit"
+            android:layout_below="@id/EmailTitle"
+            android:hint="Inches"
+            android:text=""
+            android:textColor="@android:color/holo_blue_dark"
+            android:visibility="invisible" />
+        <TextView
+            android:id="@+id/HeightInchesUnit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="''"
+            android:textSize="30sp"
+            android:layout_toRightOf="@id/HeightInchesEdit"
+            android:layout_below="@id/EmailTitle"
+            android:visibility="invisible"/>
+
+
+
+        <TextView
+            android:id="@+id/WeightTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Weight: "
+            android:textSize="30sp"
+            android:layout_below="@id/HeightTitle"
+            android:layout_marginBottom="15dp"/>
+        <TextView
+            android:id="@+id/Weight"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textSize="30sp"
+            android:layout_toRightOf="@id/WeightTitle"
+            android:layout_below="@id/HeightTitle"/>
+        <EditText
+            android:id="@+id/WeightEdit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/WeightTitle"
+            android:layout_below="@id/HeightTitle"
+            android:hint="Weight"
+            android:text=""
+            android:textColor="@android:color/holo_blue_dark"
+            android:visibility="invisible" />
+        <TextView
+            android:id="@+id/WeightEditUnits"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="LBS"
+            android:textSize="30sp"
+            android:layout_toRightOf="@id/WeightEdit"
+            android:layout_below="@id/HeightTitle"
+            android:visibility="invisible"/>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/AgeTitle"
+            android:text="Age: "
+            android:textSize="30sp"
+            android:layout_below="@id/WeightTitle" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/Age"
+            android:text=""
+            android:textSize="30sp"
+            android:layout_below="@id/WeightTitle"
+            android:layout_toRightOf="@id/AgeTitle"/>
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/AgeEdit"
+            android:layout_below="@id/WeightTitle"
+            android:layout_toRightOf="@id/AgeTitle"
+            android:hint="Age"
+            android:text=""
+            android:textColor="@android:color/holo_blue_dark"
+            android:visibility="invisible"
+            />
+        <TextView
+            android:id="@+id/AgeEditUnits"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Years"
+            android:textSize="30sp"
+            android:layout_toRightOf="@id/AgeEdit"
+            android:layout_below="@id/WeightTitle"
+            android:visibility="invisible"/>
+
+
+        <TextView
+            android:id="@+id/NumWorkoutsLoggedTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="# Workouts Logged: "
+            android:textSize="25sp"
+            android:layout_below="@id/AgeTitle"
+            android:layout_marginBottom="15dp"/>
+        <TextView
+            android:id="@+id/NumWorkoutsLogged"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textSize="30sp"
+            android:layout_toRightOf="@id/NumWorkoutsLoggedTitle"
+            android:layout_below="@id/AgeTitle"/>
+
+
+
+        <TextView
+            android:id="@+id/AccountCreationDateTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Date Account Created: "
+            android:textSize="25sp"
+            android:layout_below="@id/NumWorkoutsLoggedTitle" />
+        <TextView
+            android:id="@+id/AccountCreationDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textSize="20sp"
+            android:layout_toRightOf="@id/AccountCreationDateTitle"
+            android:layout_below="@id/NumWorkoutsLoggedTitle"
+            android:layout_marginTop="5dp"/>
+
+        <Button
+            android:id="@+id/EditInfoButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/AccountCreationDateTitle"
+            android:layout_centerHorizontal="true"
+            android:text="Edit" />
+
+        <Button
+            android:id="@+id/CancelInfoChangeButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/AccountCreationDateTitle"
+            android:layout_alignBottom="@id/CancelInfoChangeButton"
+            android:layout_alignParentLeft="true"
+            android:text="Cancel"
+            android:visibility="invisible"/>
+
+        <Button
+            android:id="@+id/SubmitInfoChangesButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/AccountCreationDateTitle"
+            android:layout_alignBottom="@id/SubmitInfoChangesButton"
+            android:layout_alignParentRight="true"
+            android:text="Submit Changes"
+            android:visibility="invisible"/>
+
+    </RelativeLayout>
+
+</LinearLayout>
