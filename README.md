@@ -1,6 +1,9 @@
 # PreviousProjects
 Previous programming projects completed at Iowa State.
 
-COM_S 311: Implementation of Dijkstra's algorithm that reads from .osm file and outputs the shortest route between two GPS coordinates. 
+COMS 309: Fitness-focused Android application (Java)
 
-COM_S 327: Roguelike Game (RLG) playable in terminal.
+COMS 311: Implementation of Dijkstra's algorithm that reads from .osm file and outputs the shortest route between two GPS coordinates (Java)
+
+COMS 327: Roguelike Game (RLG) playable in Unix console (C/C++)
+
